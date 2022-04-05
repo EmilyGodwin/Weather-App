@@ -1,0 +1,152 @@
+.first-color {
+  background: #ffaaa5;
+  background: #fcf8f3;
+  background: #ffd3b6;
+  background: #698474;
+}
+body {
+  background: #ffffff;
+}
+.box {
+  width: 800px;
+  max-width: 800px;
+  border: 5px solid #ffaaa5;
+  padding: 50px;
+  margin: 20px auto;
+  text-align: center;
+  display: block;
+  background-color: #fcf8f3;
+}
+.firstBox {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom: none;
+  margin-bottom: 0;
+}
+.secondBox {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-top: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.currentDay {
+  color: #698474;
+  font-family: "Sansita", sans-serif;
+  border: 2px solid #ffaaa5;
+  border-radius: 5px;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-bottom: 5px;
+  padding-right: 20px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  float: left;
+}
+.searchBar {
+  color: #698474;
+  font-family: "Open Sans", sans-serif;
+}
+.searchInput {
+  color: #698474;
+  font-family: "Open Sans", sans-serif;
+  border: 2px solid #ffaaa5;
+  border-radius: 5px;
+}
+.currentIcon {
+  color: #ffd3b6;
+  font-size: 100px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.currentTemp {
+  color: #698474;
+  font-family: "Open Sans", sans-serif;
+  border: none;
+  background: none;
+  padding: 20px;
+  font-weight: bold;
+  margin-top: -10px;
+  padding-top: 0;
+}
+.temp {
+  color: #698474;
+  font-family: "Open Sans", sans-serif;
+  border: none;
+  background: none;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-top: 0;
+  transition: ease-in-out 120ms;
+}
+.temp:hover {
+  color: #ffd3b6;
+}
+.currentCity {
+  color: #698474;
+  font-family: "Sansita", sans-serif;
+  border: 2px solid #ffaaa5;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+}
+ul {
+  color: #698474;
+  font-family: "Open Sans", sans-serif;
+}
+li {
+  color: #698474;
+  font-family: "Open Sans", sans-serif;
+  text-align: left;
+  margin-top: 10px;
+}
+.clock {
+  color: #698474;
+  font-family: "Open Sans", sans-serif;
+  border: 2px solid #ffaaa5;
+  border-radius: 5px;
+  width: 150px;
+  margin-left: 50px;
+  padding: 20px;
+  font-size: 20px;
+}
+.conditions {
+  color: #698474;
+  font-family: "Open Sans", sans-serif;
+  border: 2px solid #ffaaa5;
+  border-radius: 5px;
+  width: 150px;
+  margin-left: 50px;
+  margin-top: 20px;
+}
+.city {
+  color: #698474;
+  font-family: "Sansita", sans-serif;
+  border: 2px solid #ffaaa5;
+  margin: 20px;
+  margin-bottom: 0;
+  background: none;
+  transition: ease-in-out 120ms;
+  padding: 5px;
+  font-size: 20px;
+}
+.city:hover {
+  background: #ffd3b6;
+}
+.icon {
+  color: #ffd3b6;
+  font-size: 60px;
+  padding: 10px;
+}
+.boxDay {
+  color: #698474;
+  font-family: "Sansita", sans-serif;
+  border: 2px solid #ffaaa5;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 5px;
+}
+.clock:hover {
+  cursor: pointer;
+}
