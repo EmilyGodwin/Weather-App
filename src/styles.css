@@ -150,3 +150,13 @@ li {
 .clock:hover {
   cursor: pointer;
 }
+.link {
+  margin-top: 10px;
+  margin-left: 250px;
+  margin-bottom: 40px;
+  font-family: "Open Sans", sans-serif;
+}
+a {
+  color: cornflowerblue;
+  text-decoration: none;
+}
