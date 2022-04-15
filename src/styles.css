@@ -69,6 +69,8 @@ body {
   font-weight: bold;
   margin-top: -10px;
   padding-top: 0;
+  float: left;
+  margin-left: -10px;
 }
 .temp {
   color: #698474;
@@ -119,6 +121,7 @@ li {
   width: 150px;
   margin-left: 50px;
   margin-top: 20px;
+  text-transform: capitalize;
 }
 .city {
   color: #698474;

@@ -29,7 +29,7 @@
       <div class="box firstBox">
         <div class="topRow row">
           <div class="col">
-            <span class="currentDay" id="currentDay"></span>
+            <span class="currentDay" id="date">Sunday</span>
           </div>
           <div class="col">
             <span>
@@ -50,21 +50,20 @@
             <div class="currentIcon">
               <i class="fa-solid fa-cloud-sun"></i>
             </div>
-            <button class="currentTemp temp" id="currentTemp">12°F</button>
+            <button class="currentTemp temp" id="temperature"></button>
           </div>
           <div class="col">
             <span>
-              <div class="currentCity" id="currentCity">New York</div>
+              <div class="currentCity" id="city"></div>
               <ul>
-                <li>Precipitation: 0%</li>
-                <li>Humidity: 31%</li>
-                <li>Wind: 12 mph</li>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span> mph</li>
               </ul>
             </span>
           </div>
           <div class="col">
-            <div class="clock" id="currentTime"></div>
-            <div class="conditions">Sunny</div>
+            <div class="clock" id="time"></div>
+            <div class="conditions" id="description"></div>
           </div>
         </div>
         <div class="bottomRow row">

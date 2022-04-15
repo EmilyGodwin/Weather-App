@@ -1,82 +1,47 @@
-let now = new Date();
-let weekDay = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thurday",
-  "Friday",
-  "Saturday",
-];
-let days = weekDay[now.getDay()];
-function getDay() {
-  let currentDay = document.querySelector("#currentDay");
-  currentDay.innerHTML = `${days}`;
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+  return `${day}`;
 }
-getDay();
-let clock = [
-  "12",
-  "1",
-  "2",
-  "3",
-  "4",
-  "5",
-  "6",
-  "7",
-  "8",
-  "9",
-  "10",
-  "11",
-  "12",
-  "1",
-  "2",
-  "3",
-  "4",
-  "5",
-  "6",
-  "7",
-  "8",
-  "9",
-  "10",
-  "11",
-];
-let time = clock[now.getHours()];
-let minutes = now.getMinutes();
-let currentTime = document.querySelector("#currentTime");
-function military() {
-  let mTime = now.getHours();
-  currentTime.innerHTML = `${mTime}:${minutes}`;
-}
-military();
-function getTime() {
-  currentTime.innerHTML = `${time}:${minutes}`;
-}
-let element = document.querySelector("#currentTime");
-element.addEventListener("click", getTime);
-
-//week5
-
-function displayWeather(response) {
-  document.querySelector("#currentCity").innerHTML = response.data.name;
-  document.querySelector("#currentTemp").innerHTML = `${Math.round(
-    response.data.main.temp
-  )}°C`;
+function formatTime(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  return `${hours}:${minutes}`;
 }
 
-function searchCity(city) {
-  let apiKey = "12e817575070bcd60eb64f87187b9c19";
-
-  let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather";
-  let apiUrl = `${apiEndpoint}?q=${city}&appid=${apiKey}&units=metric`;
-
-  axios.get(apiUrl).then(displayWeather);
+function displayTemperature(response) {
+  let temperatureElement = document.querySelector("#temperature");
+  let cityElement = document.querySelector("#city");
+  let descriptionElement = document.querySelector("#description");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
+  let dateElement = document.querySelector("#date");
+  let timeElement = document.querySelector("#time");
+  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  cityElement.innerHTML = response.data.name;
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  timeElement.innerHTML = formatTime(response.data.dt * 1000);
 }
 
-function search(event) {
-  event.preventDefault();
-  let city = document.querySelector("#city-input").value;
-  searchCity(city);
-}
+let apiKey = "12e817575070bcd60eb64f87187b9c19";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=New York&appid=${apiKey}&units=metric`;
 
-let searchForm = document.querySelector("#city-form");
-searchForm.addEventListener("submit", search);
+axios.get(apiUrl).then(displayTemperature);
