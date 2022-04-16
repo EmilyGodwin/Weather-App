@@ -23,8 +23,8 @@ function formatTime(timestamp) {
   let minutes = date.getMinutes();
   return `${hours}:${minutes}`;
 }
-
 function displayTemperature(response) {
+  console.log(response.data);
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#description");
@@ -32,6 +32,7 @@ function displayTemperature(response) {
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#date");
   let timeElement = document.querySelector("#time");
+  let iconElement = document.querySelector("#icon");
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
@@ -39,6 +40,11 @@ function displayTemperature(response) {
   windElement.innerHTML = Math.round(response.data.wind.speed);
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
   timeElement.innerHTML = formatTime(response.data.dt * 1000);
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 let apiKey = "12e817575070bcd60eb64f87187b9c19";
