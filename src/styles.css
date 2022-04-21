@@ -140,15 +140,6 @@ li {
 .icon {
   color: #ffd3b6;
   font-size: 60px;
-  padding: 10px;
-}
-.boxDay {
-  color: #698474;
-  font-family: "Sansita", sans-serif;
-  border: 2px solid #ffaaa5;
-  margin-left: 5px;
-  margin-right: 5px;
-  border-radius: 5px;
 }
 .clock:hover {
   cursor: pointer;
@@ -160,7 +151,7 @@ li {
   font-family: "Open Sans", sans-serif;
 }
 a {
-  color: cornflowerblue;
+  color: rgb(157, 185, 236);
   text-decoration: none;
 }
 .button {
@@ -169,4 +160,21 @@ a {
   border: 2px solid #ffaaa5;
   border-radius: 5px;
   background-color: #ffd3b6;
+}
+.weatherForecast {
+  margin-top: 20px;
+  text-align: center;
+}
+.weather-forecast-temp {
+  color: #698474;
+  font-family: "Open Sans", sans-serif;
+  transition: ease-in-out 120ms;
+  display: inline;
+}
+
+.weather-forecast-date {
+  color: #698474;
+  font-family: "Sansita", sans-serif;
+  border: 2px solid #ffaaa5;
+  border-radius: 5px;
 }
