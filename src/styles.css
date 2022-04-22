@@ -165,6 +165,8 @@ a {
 .weatherForecast {
   margin-top: 10px;
   text-align: center;
+  padding-right: 0;
+  margin-right: 0;
 }
 .weather-forecast-temp {
   color: #698474;
@@ -180,4 +182,8 @@ a {
   font-family: "Sansita", sans-serif;
   border: 2px solid #ffaaa5;
   border-radius: 5px;
+}
+
+.col-2 {
+  margin: 10px;
 }
