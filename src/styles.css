@@ -56,9 +56,9 @@ body {
 }
 .currentIcon {
   color: #ffd3b6;
-  font-size: 100px;
-  margin-bottom: 0;
-  padding-bottom: 0;
+  font-size: 30px;
+  margin: 40px;
+  padding: 10px;
 }
 .currentTemp {
   color: #698474;
@@ -138,8 +138,9 @@ li {
   background: #ffd3b6;
 }
 .icon {
-  color: #ffd3b6;
-  font-size: 60px;
+  fill: #ffd3b6;
+  font-size: 30px;
+  padding: 20px;
 }
 .clock:hover {
   cursor: pointer;
@@ -162,7 +163,7 @@ a {
   background-color: #ffd3b6;
 }
 .weatherForecast {
-  margin-top: 20px;
+  margin-top: 10px;
   text-align: center;
 }
 .weather-forecast-temp {
@@ -170,6 +171,8 @@ a {
   font-family: "Open Sans", sans-serif;
   transition: ease-in-out 120ms;
   display: inline;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .weather-forecast-date {

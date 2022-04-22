@@ -23,6 +23,28 @@ function formatTime(timestamp) {
   let minutes = date.getMinutes();
   return `${hours}:${minutes}`;
 }
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = "";
+
+  forecastElement.innerHTML = `
+  <div class="row">
+  <div class="col-2">
+  <div class="weather-forecast-temp">
+  <span class="max">18°</span> <span class="min">12°</span>
+  </div class="icon">
+  <img
+  class="icon"
+  src="src/img/01d.svg"
+  alt=""
+  />
+  <div class="weather-forecast-date">Monday</div>
+  </div>
+  </div>`;
+}
+
 function displayTemperature(response) {
   console.log(response.data);
   let temperatureElement = document.querySelector("#temperature");
@@ -45,7 +67,7 @@ function displayTemperature(response) {
   timeElement.innerHTML = formatTime(response.data.dt * 1000);
   iconElement.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    `src/img/${response.data.weather[0].icon}.svg`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
@@ -84,3 +106,4 @@ let fahrenheitLink = document.querySelector("#temperature");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 search("New York");
+displayForecast();
