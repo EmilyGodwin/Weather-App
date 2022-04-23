@@ -145,7 +145,31 @@ function handleSubmit(event) {
   let cityInputElement = document.querySelector("#city-input");
   search(cityInputElement.value);
 }
+//
+function londonClick() {
+  search("London");
+}
+let london = document.querySelector("#london");
+london.addEventListener("click", londonClick);
 
+function macauClick() {
+  search("Macau");
+}
+let macau = document.querySelector("#macau");
+macau.addEventListener("click", macauClick);
+
+function singaporeClick() {
+  search("Singapore");
+}
+let singapore = document.querySelector("#singapore");
+singapore.addEventListener("click", singaporeClick);
+
+function parisClick() {
+  search("Paris");
+}
+let paris = document.querySelector("#paris");
+paris.addEventListener("click", parisClick);
+//
 function displayCelsiusTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
