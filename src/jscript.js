@@ -49,7 +49,7 @@ function formatTime(timestamp) {
     "11",
   ];
   let hour = clock[date.getHours()];
-  if (hour < [11]) {
+  if (hour < [12]) {
     return `${hour}:${minutes} AM`;
   } else return `${hour}:${minutes} PM`;
 }
@@ -145,7 +145,7 @@ function handleSubmit(event) {
   let cityInputElement = document.querySelector("#city-input");
   search(cityInputElement.value);
 }
-//
+
 function londonClick() {
   search("London");
 }
@@ -169,7 +169,7 @@ function parisClick() {
 }
 let paris = document.querySelector("#paris");
 paris.addEventListener("click", parisClick);
-//
+
 function displayCelsiusTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
